@@ -1,0 +1,130 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Heebo';
+    color: #21243D;
+}
+
+body {
+    width: 72rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    background-color: #5a5c5a;
+}
+
+/* 头部导航样式 */
+.navHeader {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.6875rem;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+.nav-links {
+    margin: 0 2.5rem 0 0;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 1.25rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #e74c3c;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* 博客列表样式 */
+.blog {
+    padding: 0 235px;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 36px;
+    padding: 40px 0;
+    color: #222;
+    font-weight: bold;
+}
+
+.blog-post {
+    padding-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #222;
+    font-weight: normal;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.date {
+    color: #555;
+}
+
+.divider {
+    margin: 0 10px;
+    color: #999;
+}
+
+.tags {
+    color: #555;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.divider-line {
+    height: 1px;
+    background-color: #eee;
+    margin-top: 20px;
+}
+
+/* 页脚样式 */
+footer {
+    padding: 6.25rem 0 3.125rem;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    gap: 2.5rem;
+}
+
+.social-link {
+    color: #142850;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.fa-brands:hover {
+    color: #7175e6;
+}
+
+.copyright {
+    color: #142850;
+    font-size: 0.875rem;
+}

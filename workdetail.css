@@ -1,0 +1,111 @@
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo';
+  color: #21243D;
+}
+
+body {
+  width: 72rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  background-color: #5a5c5a;
+}
+
+/* 头部导航样式 */
+.navHeader {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.6875rem;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+.nav-links {
+  margin: 0 2.5rem 0 0;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+  color: #e74c3c;
+}
+
+.nav-links a:hover {
+  color: #e74c3c;
+}
+
+/* 作品主体区域 */
+.project {
+  padding: 0 235px 40px 235px;
+  background-color: white;
+}
+
+.project h1,
+.project h2,
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project-year {
+  background-color: #f44336;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.project-tags {
+  color: #333;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* 页脚 */
+footer {
+  padding: 6.25rem 0 3.125rem;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  gap: 2.5rem;
+}
+
+.social-link {
+  color: #142850;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+.fa-brands:hover {
+  color: #7175e6;
+}
+
+.copyright {
+  color: #142850;
+  font-size: 0.875rem;
+}

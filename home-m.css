@@ -1,0 +1,301 @@
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo";
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.6;
+  color: #21243d;
+  background-color: #524f4f;
+}
+
+/* 容器样式 */
+.container {
+  max-width: 23.4375rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* 顶部样式 */
+header {
+  padding: 0.625rem 0;
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 100;
+}
+
+.information-wrapper {
+  margin-right: 1.25rem;
+  position: relative;
+}
+
+.information-wrapper:hover svg {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 0.0625rem solid #eee;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+  min-width: 4.375rem;
+  z-index: 200;
+}
+
+.menu-item {
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #21243d;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  color: #ff6464;
+}
+
+/* 简介部分样式 */
+.profile {
+  text-align: center;
+  align-items: center;
+}
+
+.profile-image {
+  position: relative;
+  margin: 1.875rem 0;
+}
+
+.profile-image::before {
+  content: "";
+  width: 10.625rem;
+  height: 10.625rem;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-0.4375rem, 0.625rem);
+  z-index: 1;
+  background-color: #edf7fa;
+}
+
+.profile-image img {
+  width: 10.625rem;
+  height: 10.625rem;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-image:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.profile h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3125rem;
+  margin: 1.25rem 2rem;
+  line-height: 2.5rem;
+}
+
+.description {
+  max-width: 18.75rem;
+  margin: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #21243d;
+  line-height: 1.6;
+}
+
+.btn-resume {
+  display: inline-block;
+  background-color: #ff6464;
+  color: white;
+  padding: 0.625rem 1.5625rem;
+  margin: 1.25rem 0;
+  border-radius: 0.125rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-resume:hover {
+  background-color: #d32f2f;
+}
+
+/* 最近发布样式 */
+.recent-posts {
+  padding: 1.25rem 0;
+  margin-top: 2.5rem;
+  background-color: #edf7fa;
+}
+
+.recent-posts h3 {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  color: #21243d;
+  position: relative;
+}
+
+.post {
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.1875rem;
+  margin: 0.9375rem 0.6875rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.25rem 0.625rem #3c3d3d40;
+}
+
+.post h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  margin-bottom: 0.625rem;
+}
+
+.post-meta {
+  display: flex;
+  color: #21243d;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+  gap: 1.25rem;
+}
+
+.post-content {
+  color: #21243d;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0.9375rem 0 0.625rem 0;
+}
+
+/* 特色作品样式 */
+.featured-works {
+  padding: 0 1.125rem;
+}
+
+.featured-works h3 {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 1.25rem 0;
+  color: #333;
+  position: relative;
+}
+
+.work {
+  padding: 0 0 0.9375rem;
+  border-bottom: 0.09375rem solid #d9d8d8;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.25rem 0.625rem #3c3d3d40;
+}
+
+.work-image {
+  width: 100%;
+  height: 12.5rem;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work h4 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0.9375rem 0;
+}
+
+.work-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.year {
+  width: 3.75rem;
+  background-color: #142850;
+  border-radius: 0.9375rem;
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
+  color: #ffffff;
+}
+
+.category {
+  padding: 0.25rem 0.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #8695a4;
+}
+
+.work-content {
+  color: #555;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 1.25rem;
+}
+
+/* 页脚样式 */
+footer {
+  padding: 3.125rem 0;
+  margin-top: 1.875rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  gap: 2.5rem;
+}
+
+.social-link {
+  color: #142850;
+  font-size: 1.875rem;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #555ede;
+}
+
+.copyright {
+  color: #142850;
+  font-size: 0.75rem;
+}

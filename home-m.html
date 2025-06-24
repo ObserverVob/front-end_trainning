@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home-m</title>
+    <link rel="stylesheet" href="home-m.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 顶部菜单栏 -->
+      <header>
+        <div class="information-wrapper">
+          <svg
+            id="menuToggle"
+            width="30"
+            height="20"
+            viewBox="0 0 30 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 1H30" stroke="#21243D" stroke-width="1.6" />
+            <path d="M0 10H30" stroke="#21243D" stroke-width="1.6" />
+            <path d="M0 19H30" stroke="#21243D" stroke-width="1.6" />
+          </svg>
+          <div class="dropdown-menu">
+            <div class="menu-item" data-link="works-m.html">Work</div>
+            <div class="menu-item" data-link="blog-m.html">Blog</div>
+            <div class="menu-item" data-link="supportme.html">Contact</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 作者介绍 -->
+      <section class="profile">
+        <div class="profile-image">
+          <img
+            class="author"
+            src="assets/avatar.png"
+            alt="John's profile picture"
+          />
+        </div>
+        <h1>Hi, I am John, Creative Technologist</h1>
+        <p class="description">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit. Exercitation
+          veniam consequat sunt nostrud amet.
+        </p>
+        <a href="assets/resume.docx" class="btn-resume" download
+          >Download Resume</a
+        >
+      </section>
+
+      <!-- 近期发布 -->
+      <section class="recent-posts">
+        <h3>Recent posts</h3>
+        <div class="post link-jump1">
+          <h4>Making a design system from scratch</h4>
+          <div class="post-meta">
+            <span class="date">12 Feb 2020</span>
+            <span class="delimiter">|</span>
+            <span class="tags">Design, Pattern</span>
+          </div>
+          <p class="post-content">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </p>
+        </div>
+        <div class="post link-jump2">
+          <h4>Creating pixel perfect icons in Figma</h4>
+          <div class="post-meta">
+            <span class="date">12 Feb 2020</span>
+            <span class="delimiter">|</span>
+            <span class="tags">Design, Pattern</span>
+          </div>
+          <p class="post-content">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </p>
+        </div>
+      </section>
+
+      <!-- 特色作品 -->
+      <section class="featured-works">
+        <h3>Featured works</h3>
+        <div class="work link-jump3">
+          <div class="work-image">
+            <img src="assets/dashboard.png" alt="Designing Dashboards" />
+          </div>
+          <h4>Designing Dashboards</h4>
+          <div class="work-meta">
+            <span class="year">2020</span>
+            <span class="category">Dashboard</span>
+          </div>
+          <p class="work-content">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim mollit non deserunt ullamco
+            est veniam mollit non deserunt.
+          </p>
+        </div>
+      </section>
+
+      <!-- 页脚 -->
+      <footer>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/"
+            class="social-link"
+            target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="https://telegram.org/" class="social-link" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/" class="social-link" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-link"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="copyright">Copyright ©2020 All rights reserved</div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. 给所有 .post 和 .work 卡片添加点击事件
+        document.querySelectorAll(".post, .work").forEach(function (card) {
+          card.style.cursor = "pointer";
+          card.addEventListener("click", function (e) {
+            // 防止点击卡片内部的 a 标签等元素时重复跳转
+            if (e.target.tagName.toLowerCase() === "a") return;
+
+            // 判断卡片类型并跳转
+            if (card.classList.contains("link-jump1")) {
+              window.location.href = "workdetail-m.html";
+            } else if (card.classList.contains("link-jump2")) {
+              window.location.href = "workdetail-m.html";
+            } else if (card.classList.contains("link-jump3")) {
+              window.location.href = "workdetail-m.html";
+            } else {
+              window.location.href = "workdetail-m.html";
+            }
+          });
+        });
+
+        // 2. 点击顶部菜单显示下拉选项并点击跳转
+        var menuToggle = document.getElementById("menuToggle");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+
+        // 点击按钮显示/隐藏菜单
+        menuToggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+        // 点击菜单项跳转
+        document.querySelectorAll(".menu-item").forEach(function (item) {
+          item.addEventListener("click", function () {
+            window.location.href = item.getAttribute("data-link");
+          });
+        });
+
+        // 点击页面其他地方关闭菜单
+        document.addEventListener("click", function () {
+          dropdownMenu.style.display = "none";
+        });
+
+        // 防止点击菜单时关闭
+        dropdownMenu.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
+  </body>
+</html>

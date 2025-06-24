@@ -1,0 +1,224 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Heebo';
+    color: #21243D;
+}
+
+body {
+    width: 72rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    background-color: #5a5c5a;
+}
+
+/* 头部导航样式 */
+.navHeader {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.6875rem;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+.nav-links {
+    margin: 0 2.5rem 0 0;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 1.25rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #e74c3c;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* 作品区域 */
+.works-section {
+    background-color: white;
+}
+
+.section-title {
+    margin: 0 235px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 40px 0;
+}
+
+.works-grid {
+    margin: 0 235px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 30px;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #c5c4c4;
+    z-index: 1; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 246px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.card-content {
+    flex: 3;
+    margin-left: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #222;
+}
+
+.meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.tag-year {
+    background-color: #1a2639;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tag-category {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.card-description {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* 底部区域 */
+footer {
+    padding: 6.25rem 0 3.125rem;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    gap: 2.5rem;
+}
+
+.social-link {
+    color: #142850;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.fa-brands:hover {
+    color: #7175e6;
+}
+
+.copyright {
+    color: #142850;
+    font-size: 0.875rem;
+}
+
+/* 响应式设计 */
+/* @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1.5rem 5%;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        margin: 1rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .works-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer {
+        padding: 1.5rem 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .meta-tags {
+        gap: 0.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+} */
