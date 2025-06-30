@@ -1,0 +1,77 @@
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo";
+  color: #21243d;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 19.93rem;
+  background-color: #848080;
+  margin: 0 auto;
+}
+
+/* 支持我卡片 */
+.support-container {
+  background-color: white;
+  width: 19.9375rem; /* 319px to rem */
+  height: 15.75rem; /* 252px to rem */
+  padding: 2.25rem 2.4375rem; /* 36px 39px to rem */
+}
+
+.support-title {
+  padding-bottom: 3.125rem; /* 50px to rem */
+}
+
+.firstLine {
+  display: flex;
+}
+
+.support-title h1 {
+  font-size: 1.25rem; /* 20px to rem */
+  font-weight: 700;
+  margin: 0 0 0.625rem 0; /* 10px to rem */
+  line-height: 1.2;
+}
+
+.support-section {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem; /* 18px to rem */
+}
+
+.coffee-icon {
+  width: 2.375rem; /* 38px to rem */
+  height: 3.5rem; /* 56px to rem */
+  display: block;
+}
+
+.support-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px to rem */
+}
+
+.support-label {
+  font-size: 0.75rem; /* 12px to rem */
+  font-weight: 700;
+}
+
+.support-link {
+  font-size: 0.75rem; /* 12px to rem */
+  font-weight: 400;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
